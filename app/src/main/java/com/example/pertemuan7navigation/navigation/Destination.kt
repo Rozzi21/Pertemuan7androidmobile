@@ -8,4 +8,13 @@ sealed class Destination (val route: String, val icon: Int, val title: String){
     object Task: Destination("tasks", R.drawable.ic_task, "Tasks")
     object Settings: Destination("settings", R.drawable.ic_settings, "Settings")
     object Counters: Destination("counters", R.drawable.ic_counter, "Counter")
+
+    companion object {
+        val  toList = listOf(
+            Transaction,
+            Budgets,
+            Task,
+            Settings
+        )
+    }
 }
