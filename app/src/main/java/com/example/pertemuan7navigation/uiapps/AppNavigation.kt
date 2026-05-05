@@ -28,8 +28,8 @@ fun AppNavigation(navController: NavHostController) {
         composable(Destination.Settings.route){
             Settings()
         }
-        composable("counters/id") { backStack ->
-            val data = backStack.arguments?.getString("id")
+        composable("counters/{value}") { backStack ->
+            val data = backStack.arguments?.getString("value")
             Counters(data)
         }
     }
